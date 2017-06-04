@@ -1,6 +1,85 @@
-\documentclass[12pt, letterpaper]{memoir}
+\documentclass[12pt, letterpaper]{report}
+\usepackage{float}
+\usepackage{minted}
+\usepackage{multicol}
+\usepackage[utf8]{inputenc}
+
+%\floatstyle{ruled}
+\newfloat{code}{H}{loc}[section]
+\floatname{code}{Source Code}
+
+
+
+\newcommand{\codein}[2]{\inputminted[fontsize=\large, breaklines, tabsize=4, breakanywhere]{#1}{#2}}
+
+
+\newcommand{\listcodesbs}[3]{
+\begin{code}[H]
+	\centering
+	\begin{multicols}{2}
+		\codein{#1}{#2}
+	\end{multicols}
+	\caption{#3}
+\end{code}
+}
+
+\newcommand{\listcodesc}[3]{
+\begin{code}[H]
+	\centering
+	\codein{#1}{#2}
+	\caption{#3}
+\end{code}
+}
+
+
+\newcommand{\sidebyside}[4]{%for code and math
+\begin{codemath}[H]
+	%\centering	
+	\setlength{\columnseprule}{1pt}
+	\begin{multicols}{2}
+	#1
+	\columnbreak
+	#2
+	\end{multicols}
+	\captionsource{#3}{#4}
+\end{codemath}
+}
+
+\newcommand{\picbypic}[4]{%for two parts
+\begin{partfig}[H]
+	\centering	
+	\setlength{\columnseprule}{1pt}
+	\begin{multicols}{2}
+	#1 \par
+	\columnbreak
+	#2
+	\end{multicols}
+	\captionsource{#3}{#4}
+\end{partfig}
+}
 
 
 \begin{document}
+
+\chapter{Introduction}
+
+SQL stands for Structured Query Language, and is used as a language to interact with Database Management Systems (\textbf{DBMS}), and is used in multiple languages (PostgreSQL, Oracle, MySQL etc.). This part will mostly be focused around PostgreSQL, but most will overlap with most other languages. 
+
+\chapter{Basic Structure}
+
+\section{SELECT, WHERE, and FROM}
+
+A basic query is written as follows:
+
+\begin{center}	
+	\begin{code}
+		\inputminted[fontsize=\large, centering, breaklines, tabsize=4, breakanywhere]{sql}{Example_001.sql}
+		\caption{Basic Query Structure}
+	\end{code}
+\end{center}
+
+
+\listcodesc{sql}{Example_001.sql}{Basic Query Structure}
+
 
 \end{document}
