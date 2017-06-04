@@ -1,0 +1,84 @@
+\documentclass[12pt, letterpaper]{memoir}
+\usepackage{float}
+
+\newfloat{eqlisting}{H}{loeql}[section]
+\floatname{eqlisting}{Equation}
+
+\begin{document}
+
+\chapter{Passive Sign Convention}
+
+\chapter{Resistors}
+
+\chapter{Nodal Analysis}
+
+\chapter{Mesh Analysis}
+
+\chapter{Operational Amplifiers}
+
+\chapter{Capacitors}
+
+\chapter{Inductors}
+Inductors are largely related to magnetic fields, as they store energy in the induced magnetic field created when current runs through them.
+
+\section{Magnetic Field Contributions From Current Carrying Wires}
+
+\subsection{Biot-Savart Law}
+From a current-carrying wire, each infinitesimally small part of wire contributes to the total magnetic field at a given point. The magnetic field is referred to as \textbf{H}. This small contribution is given by:
+\begin{eqlisting} \label{magfield1}
+	\begin{equation} 
+	d\overrightarrow{H} = \frac{I*d\overrightarrow{l} \times \overrightarrow{R}}{4\pi R^2}
+	\end{equation}
+\tiny where I is the current in the wire (in amps), d\overrightarrow{l} is the "piece" of wire (in meters), \overrightarrow{R} is the direction vector from the "piece" of wire to the point of the magnetic field (unitless), and R is the distance from the wire "piece" to the point (in meters)
+
+\caption{\scriptsize Partial Contribution to Magnetic Field From a Current-Carrying Wire}
+\end{eqlisting}
+
+
+Therefore the total magnetic field at a given point from a current-carrying wire is:
+
+\begin{eqlisting} \label{magfield2}
+	\begin{equation}
+	\overrightarrow{H} = \int \! \frac{I*d\overrightarrow{l} \times \overrightarrow{R}}{4 \pi R^2}
+	\end{equation}
+\caption{\scriptsize Total Magnetic Field at a Given Point from a Current-Carrying Wire}
+\end{eqlisting}
+
+The units of \textbf{\overrightarrow{H}} is $\frac{amps}{meter}$, which is similar to the units of electric fields, \textbf{\overrightarrow{E}}, which is in $\frac{volts}{meter}$
+
+\subsection{Amperes Law}
+Ampere stated that if you integrated the magnetic field intensity about a closed path around a current-carrying wire, then it would equal the current enclosed by the wire, given by the formula:
+
+\begin{eqlisting}
+	\begin{equation}
+	\oint \overrightarrow{H} \cdot d\overrightarrow{l} = I_{enclosed}
+	\end{equation}
+\caption{\scriptsize Amperes Law}
+\end{eqlisting}
+
+Forces between current carrying wires also occur due to the induced magnetic fields created by the electrons moving in the wire (the current): this is called the Lorentz Force.
+
+\begin{eqlisting}
+	\begin{equation}
+	\overrightarrow{F} = q(\overrightarrow{E} + \overrightarrow{v} \times \overrightarrow{B})
+	\end{equation}
+\tiny where \overrightarrow{F} is the force (in Newtons), q is charge (in coulombs), \overrightarrow{E} is the electric field, \overrightarrow{v} is the velocity of the charge (in meters/second, and \overrightarrow{B} is the magnetic field
+	\caption{Lorentz Force}
+\end{eqlisting}
+
+\section{Magnetic Field Intensity and Magnetic Flux Density}
+
+
+
+
+
+
+\chapter{Transients, Steady-States and First Order Circuits}
+
+\chapter{Steady-State Sinusoidal Analysis}
+
+\chapter{Sinusoidal AC Power Analysis}
+
+\chapter{Summary}
+
+\end{document}
