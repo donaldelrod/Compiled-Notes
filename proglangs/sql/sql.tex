@@ -61,25 +61,43 @@
 
 \begin{document}
 
+\normalsize
+
 \chapter{Introduction}
 
 SQL stands for Structured Query Language, and is used as a language to interact with Database Management Systems (\textbf{DBMS}), and is used in multiple languages (PostgreSQL, Oracle, MySQL etc.). This part will mostly be focused around PostgreSQL, but most will overlap with most other languages. 
 
 \chapter{Basic Structure}
 
+\section{Format of a Query}
+
+\subsection{Query Structure}
+
+There are multiple types of queries, and most queries can be performed with each method depending on how it is structured. The different clauses of the statements are listed as follows:
+
+\begin{itemize}
+\small
+	\item \verb|SELECT| - used to specify which columns are to be returned by the query
+	\item \verb|FROM| - used to specify which tables the columns are fetched from
+	\item \verb|WHERE| - used to specify a condition: if the condition is false the columns in that row of the table will not be returned, but will if the condition is true
+	\item \verb|ORDER BY| - used to specify the order in which the results of the query are returned in. Can be a multi-degree ordering (order first by first name alphabetically and then last name in reverse alphabetical order)
+	\item \verb|GROUP BY| - used to group rows of the results together by the columns from the \verb|SELECT| clause: if the rows have the same value, they will be grouped together (typically used with aggregate functions)
+	\item \verb|HAVING| - used with the \verb|GROUP BY| clause, it provides a way to specify if a group is processed (i.e. grouping by class section and having over 100 students)
+	\item \verb|LIMIT| - used to limit the number of results returned
+	\item \verb|OFFSET| - used to skip the first 'n' number of results where 'n' is the number givin in this clause
+\end{itemize}
+
+\subsection{Operators and Functions}
+
+
+
 \section{SELECT, WHERE, and FROM}
 
 A basic query is written as follows:
 
-\begin{center}	
-	\begin{code}
-		\inputminted[fontsize=\large, centering, breaklines, tabsize=4, breakanywhere]{sql}{Example_001.sql}
-		\caption{Basic Query Structure}
-	\end{code}
-\end{center}
-
-
 \listcodesc{sql}{Example_001.sql}{Basic Query Structure}
+
+These statements are used to get certain elements from a table
 
 
 \end{document}
