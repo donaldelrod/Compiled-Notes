@@ -8,14 +8,14 @@ Compile an encompassing, fully descriptive document on all subjects taken in col
 
 ## Math
 
-### -Calculu### s 1
-### -Calcul### us 2
+### -Calculus 1
+### -Calculus 2
 ### -Calculus 3: 3D Calculus
 ### -Linear Algebra
 ### -Differential Equations
 ### -Discrete Math
 ### -Cryptography
-### -Statis### tical Models
+### -Statistical Models
 
 
 ## Science
