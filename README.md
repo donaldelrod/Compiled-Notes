@@ -8,34 +8,34 @@ Compile an encompassing, fully descriptive document on all subjects taken in col
 
 ## Math
 
--Calculus 1
--Calculus 2
--Calculus 3: 3D Calculus
--Linear Algebra
--Differential Equations
--Discrete Math
--Cryptography
--Statistical Models
+### -Calculu### s 1
+### -Calcul### us 2
+### -Calculus 3: 3D Calculus
+### -Linear Algebra
+### -Differential Equations
+### -Discrete Math
+### -Cryptography
+### -Statis### tical Models
 
 
 ## Science
 
--Physics 1
--Physics 2: Electromagnetism
--Chemistry 1
+### -Physics 1
+### -Physics 2: Electromagnetism
+### -Chemistry 1
 
 
 ## Computer Science
 
--Introducion to Program Design (C++)
--Advanced Database Systems and Design (PostgreSQL and Python)
--Data Structures and Algorithms (C++)
+### -Introducion to Program Design (C++)
+### -Advanced Database Systems and Design (PostgreSQL and Python)
+### -Data Structures and Algorithms (C++)
 
 
 ## Electrical Engineering
--Circuit Theory and Electrical Engineering Fundamentals
--Digital Logic
--Embedded Systems
+### -Circuit Theory and Electrical Engineering Fundamentals
+### -Digital Logic
+### -Embedded Systems
 
 
 ## Programming Languages
