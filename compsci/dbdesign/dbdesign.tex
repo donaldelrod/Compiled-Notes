@@ -1,7 +1,53 @@
-%\documentclass[12pt, letterpaper]{memoir}
+\documentclass[12pt, letterpaper]{report}
+\usepackage{graphicx}
+\usepackage{float}
+
+
+\newfloat{dbfigure}{H}{lodbf}[section]
+\floatname{dbfigure}{Database Figure}
+
+%\floatstyle{ruled}
+%\newfloat{code}{H}{loc}[section]
+%\floatname{code}{Source Code}
+
+
+
+\newcommand{\loadfigure}[2]{\includegraphics[scale=#1]{images/#2}}
+
+\newcommand{\captionsource}[2]{
+	\centering
+	\caption[{#1}]{
+	#1
+	\\\hspace{\linewidth}
+	\normalfont\scriptsize \textbf{Source:} #2}
+}
+
+\newcommand{\listfigure}[4]{
+\begin{dbfigure}[H]
+	\centering
+	\loadfigure{#1}{#2}
+	\captionsource{#3}{#4}
+\end{dbfigure}
+}
 
 
 \begin{document}
+
+\part{Databases}
+
+\section{Definition}
+
+A database is a persistent collection of data, and is typically more than one single collection of data. Database Management Systems (\textbf{DBMS})are a central repository of shared data, and data is accessed and transferred via a common language.
+
+\listfigure{0.35}{dbmodel_1.png}{Shared Information Model}{Bryn Jefferies, USyd INFO2820}
+
+\listfigure{0.35}{dbmodel_2.png}{Relational Database Model}{Bryn Jefferies, USyd INFO2820}
+
+While the database transfers data through a common language, the set-up of the database varies from system to system. Below is an example of the structure of a DBMS:
+
+\listfigure{0.45}{dbmodel_3.png}{DBMS Structure}{Bryn Jefferies, USyd INFO2820}
+
+The language that most systems communicate with DBMSs is \textbf{SQL}, which stands for \textbf{Structured Query Language}. 
 
 \part{Relational Data Model}
 
