@@ -1,0 +1,34 @@
+\documentclass[12pt, letterpaper]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{graphicx}
+
+\usepackage{geometry}
+\usepackage{marginnote}
+
+\newfloat{eqlisting}{H}{loeql}[section]
+\floatname{eqlisting}{Equation}
+
+\newfloat{mathfigure}{H}{lomf}[chapter]
+\floatname{mathfigure}{Figure}
+
+
+\newcommand{\loadfigure}[2]{\includegraphics[scale=#1]{#2}}
+
+\newcommand{\captionsource}[2]{
+	\centering
+	\caption[{#1}]{
+	#1
+	\\\hspace{\linewidth}
+	\normalfont\scriptsize \textbf{Source:} #2}
+}
+
+\newcommand{\listfigure}[4]{
+\begin{figure}[H]
+	\centering
+	\loadfigure{#1}{#2}
+	\captionsource{#3}{#4}
+\end{figure}
+}
+
+\setmarginnotes{15px}{80px}{5px}

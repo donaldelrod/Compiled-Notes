@@ -1,0 +1,13 @@
+\chapter{Differential Equations}
+A \textbf{differential equation} is any equation that contains a derivative. Differential equations are often used to describe the flow of current or fluids as well as understand problems where the rates of change matter. \marginpar{\small Differential equations that describe some physical process are often called \textbf{mathematical models}}[-2cm] \normalsize
+
+\section{Direction Fields}
+A \textbf{direction field} is a graphical way to show the rate of change (i.e. the derivative) at each point on a grid, done by evaluating the derivative at each point and drawing a short line to illustrate the result. \listfigure{.5}{diffeq/images/direction_field_1.png}{Example of a Direction Field}{Elementary Differential Equations 9th ed.}
+The fields are sometimes written in the form
+\begin{eqlisting}[H] \label{dirfieldeq}
+	\begin{equation}
+		\frac{dy}{dt} = f(t, y)
+	\end{equation}
+	\tiny where $f$ is the given function of the two variables $t$ and $y$, sometimes called a \textbf{rate function}
+\end{eqlisting}
+\marginpar{\small The equation does not need to be solved, it must simply be evaluated for the various values of $t$ and $y$ to construct a direction field. This is best done on a computer} \normalsize

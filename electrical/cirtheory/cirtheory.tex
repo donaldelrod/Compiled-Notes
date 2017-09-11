@@ -1,14 +1,67 @@
 \documentclass[12pt, letterpaper]{memoir}
 \usepackage{float}
+\usepackage{ragged2e}
 
 \newfloat{eqlisting}{H}{loeql}[section]
 \floatname{eqlisting}{Equation}
 
 \begin{document}
 
-\chapter{Passive Sign Convention}
+\chapter{Circuit Theory}
+\textbf{Electric circuits} represent mathematical models that approximate the behavior of an actual electrical system\footnote{Typically the term describes both the model and the actual system}. 
+\section{Lumped-parameter System}
+Because electrical effects happen instantaneously through a system, the electric signals are assumed to affect every point of the system at the same time. The circuit has to meet certain requirements size-wise to be considered a \textbf{lumped-parameter system}: in short, if the dimension of the system (area) is $\frac{1}{10}$th the size or smaller than the wavelength of the electric signals. Wavelength is found by dividing the speed of light (commonly referred to as c, which measures roughly 3x$10^8$ meters/second) by the frequency of the electric signal, as shown by:
+\begin{eqlisting}[H] \label{wvlen_lp}
+	\centering
+	\begin{equation}
+		c = \lambda * f
+	\end{equation}
+	\begin{equation}
+		\lambda = \frac{c}{f} = \frac{3*10^8}{f}
+	\end{equation}
+	\small \justify so, the system can be considered a lumped-parameter circuit if $\lambda \geq \frac{1}{10}$th the area of the circuit 
+\end{eqlisting}
+\normalsize
+\section{Circuit Elements}
+Each type of circuit element behaves in a certain and specific manner, and can be described mathematically in the circuit model. These elements are called \textbf{ideal circuit components}, and are meant to accurately represent the behavior of the components in the real world (to a degree of reasonable accuracy).
+
+\section{Voltage}
+Voltage is defined as the energy per unit charge caused by the separation of positive and negative charges. The mathematical definition of voltage is:
+\begin{eqlisting} \label{voltageeq}
+	\centering
+	\begin{equation}
+		V = \frac{dw}{dq}
+	\end{equation}
+	\small where $V$ is the voltage in volts,
+			
+			$w$ is the energy in joules and
+			
+			$q$ is the charge in coulombs
+\end{eqlisting}
+\normalsize
+Voltage is the electric force that manifests itself due to separation of charge.
+
+\section{Current}
+Current is defined as the rate at which charge flows. Mathematically, it is defined as:
+\begin{eqlisting} \label{currenteq}
+	\centering
+	\begin{equation}
+		I = \frac{dq}{dt}
+	\end{equation}
+	\small where $I$ is the current in amperes,
+	
+	$q$ is the charge in coulombs and
+	
+	$t$ id the time in seconds
+\end{eqlisting}
+While current is made up of discrete, moving electrons, it can be thought of as a steady/smooth stream of electrons.
+\section{Passive Sign Convention}
+Because voltage and current are magnitudes, polarities must be assigned to the variables.
 
 \chapter{Resistors}
+Resistors are electronic components that resist the flow of the current in a system, and dissipate energy from a circuit in the form of heat. Resistors are simple (non-complex) circuit elements, and are governed by a few electrical laws.
+\section{Ohm's Law}
+
 
 \chapter{Nodal Analysis}
 
